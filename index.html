@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //1. JavaScript function to calculate the sum of two numbers.
+      let a = parseInt(prompt("enter first no."));
+      let b = parseInt(prompt("enter second no."));
+      let sum = a + b;
+      console.log(sum);
+
+      //2. JavaScript program to find the maximum number in an array.
+      let arr = [2, 3, 4, 6, 7, 8, 9];
+      console.log(Math.max(...arr));
+
+      //3. JavaScript program to reverse a given string.
+      const func = (str) => {
+        return str.split("").reverse().join("");
+      };
+      const string = "hello world";
+      const reverse = func(string);
+      console.log(reverse);
+
+      //4. JavaScript function to check if a given string is a palindrome.
+      let stringg = prompt(
+        " Enter to check if a given string is a palindrome "
+      );
+
+      const palindrome = () => {
+        let reverses = stringg.split("").reverse().join("");
+
+        if (stringg.toLocaleLowerCase() == reverses.toLocaleLowerCase()) {
+          console.log(`${stringg} is a palindrome`);
+        } else {
+          console.log(` ${stringg} is not a palindrome`);
+        }
+      };
+      palindrome();
+
+      //5. JavaScript function that takes an array of numbers and returns a new array with only the even numbers.
+      let arra = [1, 2, 3, 4, 7, 6, 9, 66, 9, 44];
+      let even = [];
+
+      for (let i = 0; i < arra.length; i++) {
+        if (arra[i] % 2 == 0) even.push(arra[i]);
+      }
+      console.log(even);
+
+      //6. JavaScript program to calculate the factorial of a given number.
+
+      let fact = parseInt(prompt("calculate the factorial of number!"));
+      let f = 1;
+      for (let i = 1; i <= fact; i++) {
+        f = f * i;
+      }
+      console.log(f);
+
+      //7. JavaScript program to convert a string to title case (capitalize the first letter of each word)
+      const x = (str) => {
+        str = str.toLowerCase().split(" ");
+        for (let i = 0; i < str.length; i++) {
+          str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+        }
+        return str.join(" ");
+      };
+      console.log(x("capitalize the first letter of each word"));
+
+      //8. JavaScript function to check if a given number is prime.
+      let number = parseInt(
+        prompt(" Enter to check if a given number is prime ")
+      );
+
+      const prime = (number) => {
+        if (number < 2) {
+          return `${number} is not a prime number!`;
+        }
+
+        for (let i = 2; i < number; i++) {
+          if (number % i === 0) {
+            return `${number} is not a prime number!`;
+          }
+        }
+        return `${number} is a prime number!`;
+      };
+
+      console.log(prime(number));
+
+      //9.JavaScript function that returns the Fibonacci series.
+      let num = parseInt(prompt(" Enter the limit for Fibonacci Series "));
+
+      const fibonacci = (num) => {
+        let x = 0;
+        let y = 1;
+        let z;
+        for (i = 0; i <= num; i++) {
+          z = x + y;
+          x = y;
+          y = z;
+
+          i = i + 1;
+          console.log(x);
+        }
+        return y;
+      };
+
+      console.log(fibonacci(num));
+    </script>
+  </body>
+</html>
